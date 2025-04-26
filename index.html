@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/main.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="hederis">
+        <div id="header-background"></div>
+        <img src="src/images/Logo_icon.png" id="logo">
+        <img src="src/images/navigation-bar.png" id="nav-icon">
+        <nav id="nav-container">
+            <img src="src/images/close.png" id="close-menu">
+            <a class="navigation" href="#hero-section">Home</a>
+            <a class="navigation" href="#about">About</a>
+            <a class="navigation" href="#download-section">Download</a>
+            <a class="navigation" href="#guide-section">Guide</a>
+        </nav>
+    </header>
+
+    <section id="hero-section">
+        <div id="hero-background"></div>
+        <div class="hero-circle" id="circle1"></div>
+        <div class="hero-circle" id="circle2"></div>
+        <div class="hero-circle" id="circle3"></div>
+        <div class="hero-circle" id="circle4"></div>
+        <div class="hero-circle" id="circle5"></div>
+        <div class="hero-circle" id="circle6"></div>
+        <img src="src/images/Wood_background.jpg" id="hero-background-img">
+        <h1 class="hiddenHero">Manage your hotel</h1>
+        <p class="hiddenHero">Have the ability to interact with your own hotel or experience it as a guest.</p>
+    </section>
+
+    <div id="sticky-header"></div>
+
+    <section id="main-section">
+        <div id="about">
+            <h1 id="about-title" class="hiddenAbout">About the program</h1>
+            <p id="about-text" class="hiddenAbout">It's a Hotel Booking System which allows users to manage room reservations, availability, and customer details. Program offers 2 roles: guest and administrator. Each have it's own functions.</p>
+            <img src="src/images/about_img.jpg" id="about-img" class="hiddenImage">
+        </div>
+        <div id="download-section">
+            <div id="download-container">
+                <h1 id="download-title">Download program</h1>
+                <div id="requirements">
+                    <h1>System Requirements:</h1>
+                    <p>Windows 10 or later;</p>
+                    <p>2GB RAM minimum;</p>
+                    <p>1 GHz or faster processor (32-bit or 64-bit).</p>
+                </div>
+                <a href="https://github.com/23DP1DPale/Hotel_project_DPale/archive/refs/heads/master.zip" download="guide_file" id="download-button">
+                    <div id="download-icon-container">
+                        <img src="src/images/download-icon.png" id="download-icon">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="guide-section">
+            <div id="guide-container">
+                <h1 id="guide-title">Guide</h1>
+                <div  class="list" id="setup">
+                    <h1>Setup program</h1>
+                    <ul>
+                        <li class="list-content"><a href="#download-section">Click download button to download zip file with program.</a></li>
+                        <li class="list-content">After zip file is downloaded, it should be located in your downloads folder.</li>
+                        <li class="list-content">Right click on zip file and press "extract all" button.</li>
+                        <li class="list-content">Rest of the information is stored <a href="https://github.com/23DP1DPale/Hotel_project_DPale/releases/download/readme/README.MD" download="guide">here</a></li>
+                    </ul>
+                </div>
+                <div class="list" id="run-program">
+                    <h1>Run program</h1>
+                    <h3>With cmd</h3>
+                    <ul>
+                        <li>Open cmd prompt by searching cmd in search bar</li>
+                        <li></li>
+                    </ul>
+                    <h3>With VS code</h3>
+                    <ul>
+                        <li>Download VS code if you don't have it</li>
+                        <li>Open it</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="contactUs-container">
+            <h1 class="contact-us contact-title">Contact us</h1>
+            <p class="contact-us contact-phone">Phone: XX XXX XXX</p>
+            <p class="contact-us contact-email">E-mail: XXX@gmail.com</p>
+        </div>
+        <div id="copyright-container">
+            <p id="copyright">Copyright &copy 2025 Daniels Palejs</p>
+        </div>
+    </footer>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
