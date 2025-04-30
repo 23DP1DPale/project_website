@@ -28,6 +28,16 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
+const circleObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('circleAppear');
+        } else {
+            entry.target.classList.remove('circleAppear');
+        }
+    });
+});
+
 const hiddenHeroElements = document.querySelectorAll('.hiddenHero')
 hiddenHeroElements.forEach((el) => observer.observe(el));
 
@@ -36,3 +46,12 @@ hiddenAboutElements.forEach((el) => observer.observe(el));
 
 const hiddenImage = document.querySelectorAll('.hiddenImage');
 hiddenImage.forEach((el) => observer.observe(el));
+
+const hiddenDownload = document.querySelectorAll('.hiddenDownload');
+hiddenDownload.forEach((el) => observer.observe(el));
+
+const hiddenCircleTop = document.querySelectorAll('.hiddenCircleTop');
+hiddenCircleTop.forEach((el) => circleObserver.observe(el));
+
+const hiddenCircleBottom = document.querySelectorAll('.hiddenCircleBottom');
+hiddenCircleBottom.forEach((el) => circleObserver.observe(el));
