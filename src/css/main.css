@@ -289,7 +289,7 @@ header {
 
 #requirements {
     grid-area: requirements;
-    background-color: #bdb4aa;
+    background-color: #d2c7bc;
     
 }
 
@@ -310,7 +310,7 @@ header {
     height: 104%;
     border-radius: 50px;
     z-index: -1;
-    background: linear-gradient(#c3d6b8, #a59d9d, #B0CDA0, #a29b9b,#9fb393);
+    background: linear-gradient(#88b586 20%, rgb(189, 181, 172) 80%, rgb(132, 140, 121));
 }
 
 #download-button {
@@ -434,7 +434,7 @@ header {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
     ". . guideTitle . ."
-    ". setup setup run .";
+    ". setup setup run run";
     background-color: #d2d6b9;
     height: 100%;
 }
@@ -452,6 +452,8 @@ header {
 
 #run-program {
     grid-area: run;
+    font-size: 20px;
+    padding-right: 10px;
 }
 
 .list-content {
@@ -465,7 +467,6 @@ header {
 
 .list > h1 {
     font-size: 30px;
-
 }
 
 #contactUs-container {
@@ -605,9 +606,21 @@ header {
         padding-top: 100px;
     }
 
+    #guide-container {
+        display: grid;
+        grid-template-columns: 50px 1fr 1fr 1fr 150px;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        ". . guideTitle . ."
+        ". setup setup run run";
+        background-color: #d2d6b9;
+        height: 100%;
+    }
+
     .hiddenImage {
         transform: translateY(-200px);
     }
+
     .appear {
         opacity: 100;
         filter: blur(0);
@@ -670,15 +683,18 @@ header {
         visibility: visible;
         top: 0;
     }
+
     #nav-icon {
         visibility: visible;
     }
+
     .navigation {
         padding-left: 15px;
         background: linear-gradient(#99BC85) left/ var(--underline-width, 0%) 100% no-repeat;
         height: 2em;
         padding-top: 1em;
     }
+
     #logo {
         right: 50%;
         transform: translateX(50%);
@@ -700,7 +716,7 @@ header {
 
     #guide-container {
         grid-template-columns: 50px 1fr 50px;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 150px 1fr 1fr;
 
         grid-template-areas: 
         ".  guideTitle . "
