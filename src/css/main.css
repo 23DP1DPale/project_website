@@ -10,6 +10,10 @@ body {
     font-style: normal;
 }
 
+img {
+    user-select: none;
+}
+
 header {
     display: flex;
     position: relative;
@@ -471,16 +475,17 @@ header {
 
 #contactUs-container {
     display: grid;
-    grid-template-columns: 150px 1fr 150px;
-    grid-template-rows: 2fr 1fr 1fr;
-    height: 150px;
+    grid-template-columns:  1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 250px;
     background-color: #99BC85;
     color: rgb(0, 0, 0);
     text-align: center;
     grid-template-areas: 
-    ". ctitle ."
-    ". cphone ."
-    ". cemail .";
+    "ctitle"
+    "cphone"
+    "cemail"
+    "image";
 }
 
 .contact-us {
@@ -494,10 +499,51 @@ header {
 
 .contact-phone {
     grid-area: cphone;
+    padding: 10px;
+}
+
+#phone-img {
+    width: 25px;
+    padding: 5px;
+    transform: translateY(25%);
 }
 
 .contact-email {
     grid-area: cemail;
+}
+
+#email-img {
+    width: 25px;
+    transform: translateY(25%);
+    padding-right: 10px;
+}
+
+#contactImgContainer {
+    grid-area: image;
+}
+
+.contact-img {
+    width: 50px;
+    padding: 5px 30px 5px 30px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.contact-img:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
+#facebook {
+    background-color: #1877F2;
+}
+
+#twitter {
+    background-color: black;
+}
+
+#youtube {
+    background-color: #FF0000;
 }
 
 #copyright-container {
@@ -711,7 +757,7 @@ header {
     }
 
     #guide-section {
-        height: 700px;
+        height: 750px;
     }
 
     #guide-container {
