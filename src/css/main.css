@@ -200,22 +200,6 @@ header {
     font-size: 25px;
 }
 
-/* .hero-section-text {
-    animation: hsAppear 1s ease-in-out;
-}
-
-
-
-@keyframes hsAppear {
-    0% {opacity: 5%; filter: blur(5px); transform: translateX(-700px)}
-    100% {opacity: 100%; filter: blur(0); transform: translateX(0)}
-}
-
-@keyframes unblur {
-    0% {filter: blur(5px)}
-    100% {filter: blur(0)}
-} */
-
 #sticky-header {
     position: sticky;
     top: 0;
@@ -294,7 +278,6 @@ header {
 #requirements {
     grid-area: requirements;
     background-color: #d2c7bc;
-    
 }
 
 #requirements > h1 {
@@ -654,11 +637,11 @@ header {
 
     #guide-container {
         display: grid;
-        grid-template-columns: 50px 1fr 1fr 1fr 150px;
+        grid-template-columns: 25px 1fr 150px 1fr 25px;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
         ". . guideTitle . ."
-        ". setup setup run run";
+        ". setup . run run";
         background-color: #d2d6b9;
         height: 100%;
     }
@@ -760,6 +743,14 @@ header {
         height: 750px;
     }
 
+    #about {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "Title"
+        "Text"
+        "Image";
+    }
+
     #guide-container {
         grid-template-columns: 50px 1fr 50px;
         grid-template-rows: 150px 1fr 1fr;
@@ -772,5 +763,74 @@ header {
 
     .list > h1 {
         text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    
+
+    #guide-container {
+        grid-template-columns: 1fr ;
+        grid-template-rows: 150px 1fr 1fr;
+
+        grid-template-areas: 
+        "guideTitle"
+        "setup"
+        "run";
+    }
+
+    #download-title {
+        font-size: 35px;
+    }
+
+    #about {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+        grid-template-areas: 
+        "Title"
+        "Text"
+        "Image";
+    }
+
+    #download-container {
+        grid-template-areas: 
+        ". dwnTitle ."
+        ". requirements ."
+        ". button .";
+        height: 400px;
+    }
+
+    #requirements {
+        width: 95vw;
+    }
+
+    #download-button {
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: 80px;
+    }
+
+    #requirements > h1 {
+        font-size: 28px;
+    }
+    
+    #requirements > p {
+        font-size: 18px;
+    }
+
+    #hero-section > h1 {
+        padding-left: 50px;
+        font-size: 75px;
+        margin-bottom: 0;
+    }
+    
+    #hero-section > p {
+        padding-left: 50px;
+        font-size: 25px;
+    }
+
+    .contact-img {
+        padding: 5px 20px 5px 20px;
     }
 }
