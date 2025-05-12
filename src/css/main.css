@@ -200,6 +200,10 @@ header {
     font-size: 25px;
 }
 
+#main-section {
+    background: linear-gradient(rgb(255, 252, 243), white, rgb(255, 250, 236) 20%, white, rgb(222, 255, 213) 80%);
+}
+
 #sticky-header {
     position: sticky;
     top: 0;
@@ -412,7 +416,7 @@ header {
 
 #guide-section {
     padding-top: 200px;
-    height: 500px;
+    height: 525px;
 }
 
 #guide-container {
@@ -421,7 +425,8 @@ header {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
     ". . guideTitle . ."
-    ". setup setup run run";
+    ". setup setup run run"
+    ". . guideButton . .";
     background-color: #d2d6b9;
     height: 100%;
 }
@@ -443,11 +448,40 @@ header {
     padding-right: 10px;
 }
 
+#guide-button {
+    grid-area: guideButton;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(255, 251, 245);
+    border: 3px solid black;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#guide-button > a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#guide-button:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
 .list-content {
     padding-bottom: 5px;
 }
 
-.list-content > a {
+.guide-link {
     color: rgb(43, 112, 112);
     text-decoration: underline;
 }
@@ -566,8 +600,8 @@ header {
 .hiddenDownload {
     opacity: 0;
     filter: blur(5px);
-    transform: translateY(-200px);
-    transition: opacity 1s, filter 1s, transform 1s;
+    transform: translateY(-100px);
+    transition: opacity 1s, filter 1s, transform 2s;
 }
 
 .hiddenCircleTop {
@@ -641,7 +675,8 @@ header {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
         ". . guideTitle . ."
-        ". setup . run run";
+        ". setup . run run"
+        ". . guideButton . .";
         background-color: #d2d6b9;
         height: 100%;
     }
@@ -662,7 +697,6 @@ header {
     #circle2 {
         left: 0;
         height: 700px;
-        
     }
 
     #circle3 {
@@ -753,12 +787,13 @@ header {
 
     #guide-container {
         grid-template-columns: 50px 1fr 50px;
-        grid-template-rows: 150px 1fr 1fr;
+        grid-template-rows: 150px 1fr 1fr 1fr;
 
         grid-template-areas: 
         ".  guideTitle . "
         ". setup ."
-        ". run .";
+        ". run ."
+        ". guideButton .";
     }
 
     .list > h1 {
@@ -767,16 +802,24 @@ header {
 }
 
 @media (max-width: 600px) {
-    
+
+    #circle1 {
+        height: 1375px;
+    }
+
+    #guide-section {
+        height: 800px;
+    }
 
     #guide-container {
         grid-template-columns: 1fr ;
-        grid-template-rows: 150px 1fr 1fr;
+        grid-template-rows: 150px 1fr 1fr 1fr;
 
         grid-template-areas: 
         "guideTitle"
         "setup"
-        "run";
+        "run"
+        "guideButton";
     }
 
     #download-title {
@@ -785,11 +828,25 @@ header {
 
     #about {
         grid-template-columns: 1fr;
-        row-gap: 50px;
+        row-gap: 25px;
         grid-template-areas: 
         "Title"
         "Text"
         "Image";
+        height: 850px;
+    }
+
+    #about-title {
+        margin: 0;
+    }
+
+    #about-text {
+        margin: 0;
+    }
+
+    #download-section {
+        padding-top: 150px;
+        height: 400px;
     }
 
     #download-container {
